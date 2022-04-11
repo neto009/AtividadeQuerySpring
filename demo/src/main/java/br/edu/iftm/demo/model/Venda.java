@@ -1,5 +1,6 @@
 package br.edu.iftm.demo.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,5 +19,7 @@ public class Venda {
     private Integer id;
 
     private Integer id_nf, id_item, cod_prod, quantidade, desconto;
-    private Double valor_unit;
+
+    @Column(name="valor_unit")
+    private Double valorUnitario;
 }

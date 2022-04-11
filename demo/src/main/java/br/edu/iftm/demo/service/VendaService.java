@@ -15,16 +15,16 @@ public class VendaService {
     VendaRepository repository;
 
     public List<Venda> a() {
-        return repository.findByDesconto(0);
+        return repository.findByDescontoNull();
     }
 
     public List<Venda> b(){
-        return repository.findByDesconto();
+        return repository.findByDescontoGreaterThan(0);
     };
 
     
     public List<Venda> c(){
-        return repository.findByMaior();
+        return repository.findByOrderByValorUnitario();
     };
     
 }

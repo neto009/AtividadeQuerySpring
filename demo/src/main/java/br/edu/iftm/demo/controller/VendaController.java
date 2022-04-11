@@ -3,6 +3,8 @@ package br.edu.iftm.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,8 +20,8 @@ public class VendaController {
     VendaService service;
 
     @GetMapping("a")
-    List<Venda> exa(){
-        return service.a();
+    ResponseEntity<List<Venda>> exa(){
+        return ResponseEntity.status(HttpStatus.OK).body(service.a());
     }
 
     @GetMapping("b")
@@ -28,7 +30,7 @@ public class VendaController {
     }
 
     @GetMapping("c")
-    List<Venda> exc(){
-        return service.c();
+    ResponseEntity<List<Venda>> exc(){
+        return ResponseEntity.status(HttpStatus.OK).body(service.c());
     }
 }
