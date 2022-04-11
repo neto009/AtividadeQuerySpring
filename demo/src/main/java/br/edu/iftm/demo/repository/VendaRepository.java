@@ -14,7 +14,10 @@ public interface VendaRepository extends CrudRepository<Venda, Integer> {
     public List<Venda> findByDesconto(Integer desconto);
 
     // Retorna todos os itens que foram vendidos com desconto. 
+    public List<Venda> findByDesconto();
+
     // Retorna todos os itens e ordene o resultado do maior valor para o menor. 
+    public List<Venda> findByMaior();
     // Retorna o produto que mais vendeu.  
     // Consulte as NF que foram vendidas mais de 10 unidades de pelo menos um produto. 
     // Pesquise o valor total das NF, onde esse valor seja maior que 500, e ordene o resultado do maior valor para o menor.

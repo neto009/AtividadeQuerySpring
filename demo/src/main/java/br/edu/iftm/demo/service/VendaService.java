@@ -17,5 +17,14 @@ public class VendaService {
     public List<Venda> a() {
         return repository.findByDesconto(0);
     }
+
+    public List<Venda> b(){
+        return repository.findByDesconto();
+    };
+
+    
+    public List<Venda> c(){
+        return repository.findByMaior();
+    };
     
 }

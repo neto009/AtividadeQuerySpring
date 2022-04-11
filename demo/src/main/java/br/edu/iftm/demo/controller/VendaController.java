@@ -21,4 +21,14 @@ public class VendaController {
     List<Venda> exa(){
         return service.a();
     }
+
+    @GetMapping("b")
+    List<Venda> exb(){
+        return service.b();
+    }
+
+    @GetMapping("c")
+    List<Venda> exc(){
+        return service.c();
+    }
 }
