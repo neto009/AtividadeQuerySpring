@@ -26,5 +26,21 @@ public class VendaService {
     public List<Venda> c(){
         return repository.findByOrderByValorUnitario();
     };
-    
+
+    public List<Venda> d(){
+        return repository.findTopByOrderByQuantidadeDesc();
+    };
+
+    public List<Venda> d2() {
+        List<Venda> d = repository.findByOrderByQuantidadeDesc();
+        return repository.findByQuantidade(d.get(0).getQuantidade());
+    }
+
+    public List<Venda> e(){
+        return repository.findByQuantidadeGreaterThanEqual(10);
+    };
+
+    public List<Integer> f(){
+        return repository.findByNotaFiscalAcimaDe500();
+    };
 }

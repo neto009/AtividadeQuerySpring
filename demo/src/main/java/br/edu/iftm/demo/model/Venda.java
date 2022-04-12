@@ -18,7 +18,14 @@ public class Venda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer id_nf, id_item, cod_prod, quantidade, desconto;
+    @Column(name="id_item")
+    private Integer idItem;
+
+
+    @Column(name="id_nf")
+    private Integer idNotaFiscal;
+
+    private Integer cod_prod, quantidade, desconto;
 
     @Column(name="valor_unit")
     private Double valorUnitario;
